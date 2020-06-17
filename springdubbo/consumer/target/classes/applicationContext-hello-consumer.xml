@@ -15,8 +15,12 @@
 >
 
     <dubbo:application name="consumer-of-hello-world-app"  />
+
+    <!-- use zookeeper to registry-->
+    <dubbo:registry address="zookeeper://localhost:2181"/>
+
     <dubbo:reference id="consumerService"
-          interface="org.imooc.jiaming.ServiceAPI"
-		  url="dubbo://localhost:20880"></dubbo:reference>
+          interface="org.imooc.jiaming.ServiceAPI"/>
+		  <!--url="dubbo://localhost:20880"></dubbo:reference-->
 
 </beans>
